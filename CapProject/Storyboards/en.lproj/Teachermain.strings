@@ -1,0 +1,123 @@
+
+/* Class = "UILabel"; text = "SCHEDULE"; ObjectID = "13B-fR-twe"; */
+"13B-fR-twe.text" = "SCHEDULE";
+
+/* Class = "UILabel"; text = "STUDENTS"; ObjectID = "41g-5Y-H1Q"; */
+"41g-5Y-H1Q.text" = "STUDENTS";
+
+/* Class = "UITableViewSection"; headerTitle = "Semester "; ObjectID = "4g6-hM-ioJ"; */
+"4g6-hM-ioJ.headerTitle" = "Semester ";
+
+/* Class = "UILabel"; text = "ADD STUDENTS"; ObjectID = "666-Ho-kai"; */
+"666-Ho-kai.text" = "ADD STUDENTS";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "6ya-hs-AI8"; */
+"6ya-hs-AI8.text" = "To";
+
+/* Class = "UIBarButtonItem"; title = "MENU"; ObjectID = "9kP-NT-Q5w"; */
+"9kP-NT-Q5w.title" = "MENU";
+
+/* Class = "UILabel"; text = "COURSE SECTION"; ObjectID = "AD1-WY-WDU"; */
+"AD1-WY-WDU.text" = "COURSE SECTION";
+
+/* Class = "UITableViewSection"; headerTitle = "Course Time"; ObjectID = "AFj-SY-blu"; */
+"AFj-SY-blu.headerTitle" = "Course Time";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "Bye-dM-hOY"; */
+"Bye-dM-hOY.normalTitle" = "Start";
+
+/* Class = "UILabel"; text = "POST CLASS NEWS"; ObjectID = "D2Q-fH-k6d"; */
+"D2Q-fH-k6d.text" = "POST CLASS NEWS";
+
+/* Class = "UILabel"; text = "From"; ObjectID = "EBr-Kl-Mk4"; */
+"EBr-Kl-Mk4.text" = "From";
+
+/* Class = "UIButton"; normalTitle = "T"; ObjectID = "KhB-6D-0CI"; */
+"KhB-6D-0CI.normalTitle" = "T";
+
+/* Class = "UITextField"; placeholder = "             Course's Name"; ObjectID = "L6g-RU-vlI"; */
+"L6g-RU-vlI.placeholder" = "             Course's Name";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "ORV-aQ-jnl"; */
+"ORV-aQ-jnl.text" = "To";
+
+/* Class = "UIButton"; normalTitle = "W"; ObjectID = "PkM-0i-PJd"; */
+"PkM-0i-PJd.normalTitle" = "W";
+
+/* Class = "UILabel"; text = "ADD NEW CLASS"; ObjectID = "Uc1-WK-nbN"; */
+"Uc1-WK-nbN.text" = "ADD NEW CLASS";
+
+/* Class = "UIButton"; normalTitle = "M"; ObjectID = "Uos-Jm-Ziv"; */
+"Uos-Jm-Ziv.normalTitle" = "M";
+
+/* Class = "UIButton"; normalTitle = "F"; ObjectID = "W7E-e1-nxG"; */
+"W7E-e1-nxG.normalTitle" = "F";
+
+/* Class = "UIButton"; normalTitle = "T"; ObjectID = "XQS-9H-5b5"; */
+"XQS-9H-5b5.normalTitle" = "T";
+
+/* Class = "UIButton"; normalTitle = "Syllabus"; ObjectID = "Y7U-JE-gCa"; */
+"Y7U-JE-gCa.normalTitle" = "Syllabus";
+
+/* Class = "UIBarButtonItem"; title = "COURSE"; ObjectID = "YP3-Yh-VrS"; */
+"YP3-Yh-VrS.title" = "COURSE";
+
+/* Class = "UILabel"; text = "CLASS NAME"; ObjectID = "Yvb-Ww-hhO"; */
+"Yvb-Ww-hhO.text" = "CLASS NAME";
+
+/* Class = "UIBarButtonItem"; title = "Print"; ObjectID = "Z6X-Ae-oUB"; */
+"Z6X-Ae-oUB.title" = "Print";
+
+/* Class = "UILabel"; text = "We did it"; ObjectID = "ZWS-rq-QXX"; */
+"ZWS-rq-QXX.text" = "We did it";
+
+/* Class = "UILabel"; text = "Select Class"; ObjectID = "aQb-eM-azb"; */
+"aQb-eM-azb.text" = "Select Class";
+
+/* Class = "UIButton"; normalTitle = "S"; ObjectID = "aTK-rA-VW9"; */
+"aTK-rA-VW9.normalTitle" = "S";
+
+/* Class = "UILabel"; text = "POST NEW ASSIGNMENT"; ObjectID = "bQF-ry-UdH"; */
+"bQF-ry-UdH.text" = "POST NEW ASSIGNMENT";
+
+/* Class = "UITextField"; placeholder = "             Section name"; ObjectID = "cOe-Uv-Wcq"; */
+"cOe-Uv-Wcq.placeholder" = "             Section name";
+
+/* Class = "UITextField"; placeholder = "    Add Adress (Optional)"; ObjectID = "dWW-AZ-jqJ"; */
+"dWW-AZ-jqJ.placeholder" = "    Add Adress (Optional)";
+
+/* Class = "UILabel"; text = "#"; ObjectID = "eNA-Qu-K2i"; */
+"eNA-Qu-K2i.text" = "#";
+
+/* Class = "UILabel"; text = "  Select Days"; ObjectID = "ejD-h1-uBI"; */
+"ejD-h1-uBI.text" = "  Select Days";
+
+/* Class = "UITableViewSection"; headerTitle = "Material"; ObjectID = "elz-vy-i1E"; */
+"elz-vy-i1E.headerTitle" = "Material";
+
+/* Class = "UITableViewSection"; headerTitle = "Location"; ObjectID = "hlP-5u-ztv"; */
+"hlP-5u-ztv.headerTitle" = "Location";
+
+/* Class = "UILabel"; text = "ATTENDANCE"; ObjectID = "kOl-bW-yW4"; */
+"kOl-bW-yW4.text" = "ATTENDANCE";
+
+/* Class = "UIButton"; normalTitle = "S"; ObjectID = "mLc-qk-xPR"; */
+"mLc-qk-xPR.normalTitle" = "S";
+
+/* Class = "UILabel"; text = "From"; ObjectID = "mtw-8r-FiP"; */
+"mtw-8r-FiP.text" = "From";
+
+/* Class = "UITableViewSection"; headerTitle = "Section-1"; ObjectID = "nWx-Ac-JO4"; */
+"nWx-Ac-JO4.headerTitle" = "Section-1";
+
+/* Class = "UITableViewSection"; headerTitle = "Course"; ObjectID = "s3V-Rb-1El"; */
+"s3V-Rb-1El.headerTitle" = "Course";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "sR5-Rd-P7U"; */
+"sR5-Rd-P7U.title" = "Item";
+
+/* Class = "UITableViewSection"; headerTitle = "Schedule"; ObjectID = "z9e-e0-zeZ"; */
+"z9e-e0-zeZ.headerTitle" = "Schedule";
+
+/* Class = "UILabel"; text = "Number of Student:"; ObjectID = "zsP-NK-5dH"; */
+"zsP-NK-5dH.text" = "Number of Student:";
