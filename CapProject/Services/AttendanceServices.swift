@@ -17,8 +17,15 @@ class AttendanceServices: NSObject{
     
     static func createAttendanceKey(courseKey: String!, completion: @escaping (String)->Void){
         
-        let ref = Database.database().reference().child(Constants.attendance).child(NetworkConstant.currentUserUID!).child(courseKey).childByAutoId()
+        var ref = Database.database().reference().child(Constants.attendance).child(NetworkConstant.currentUserUID!).child(courseKey).childByAutoId()
         let attkey = ref.key
+        
+        ref = ref.child(Constants.attendance)
+        
+        let atts = [Constants.AttendanceKey: attkey]
+        
+        ref.setValue(atts)
+        
         return completion(attkey)
     }
     
@@ -43,6 +50,7 @@ class AttendanceServices: NSObject{
         attandance.present = true
         attandance.late = false
         attandance.absent = false
+        attandance.AttendanceID = attendanceKey
         
         return completion(attandance)
         

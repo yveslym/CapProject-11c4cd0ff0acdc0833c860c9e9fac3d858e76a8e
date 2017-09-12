@@ -33,7 +33,7 @@ class TeacherTakeAttendanceViewController: UIViewController {
     
     @IBAction func StartGenerate(_ sender: Any) {
         
-        TeacherServices.genrateQRCode(CourseIndex: index, iconView: codeview)
+        TeacherServices.genrateAtteandaceQRCode(CourseIndex: index, iconView: codeview)
     }
     
     @IBAction func SelectCourse(_ sender: Any) {

@@ -84,8 +84,7 @@ class StudentAddNewCourseViewController: UIViewController {
                           
                             if teacher != nil{
                                 self.teacherName.text = teacher?.firstName
-                                print(" teacher name \(teacher?.firstName!) line 87")
-                            }
+                                                            }
                         })
                         
                       self.configureVC()

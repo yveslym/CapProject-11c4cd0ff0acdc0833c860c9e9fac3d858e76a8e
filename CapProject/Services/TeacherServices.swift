@@ -67,7 +67,7 @@ class TeacherServices{
         //let ref =  NetworkConstant.teacherInfoRef
         
         ref.observeSingleEvent(of: .value, with:{(snapshot) in
-           
+            
             print (snapshot.children)
             
             guard let teacher = Teacher(snapshot: snapshot)
@@ -77,7 +77,7 @@ class TeacherServices{
             }
             
             print("teacher uid: \(teacher.firstName!) line 76")
-
+            
             return completion(teacher)
             print("retrive successful")
         })
@@ -152,6 +152,25 @@ class TeacherServices{
             
         })
     }
+    
+    static func genrateAtteandaceQRCode(CourseIndex index:Int, iconView: UIImageView){
+        
+        
+        CourseServices.fetchTeacherCourses(teacherUID: NetworkConstant.currentUserUID!, completion: { course in
+            
+            if course != nil{
+                let courseID = course?[index].courseID
+                
+                AttendanceServices.createAttendanceKey(courseKey: courseID, completion: { attendanceCode in
+                    
+                    iconView.image = QRCode.generateImage("\(courseID!) \(attendanceCode)", avatarImage: UIImage(named: "avatar"), avatarScale: 0.3)
+                    
+                })
+            }
+            
+        })
+    }
+    
 }
 
 

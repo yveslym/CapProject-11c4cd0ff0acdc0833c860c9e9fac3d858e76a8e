@@ -47,6 +47,7 @@ struct Constants{
     static let True = "true"
     static let False = "false"
     static let info = "info"
+    static let attendanceInfo = "attendance Info"
     }
 
 
