@@ -23,6 +23,7 @@ class Course: NSObject{
     var attendance = [Attendance]()
     var schedule : Schedule?
     var courseAdress : String?
+    var numberOfStudent: Int?
     
     // add course start time and end time
     
@@ -31,6 +32,7 @@ class Course: NSObject{
         self.courseID   = ""
         self.Description = ""
         self.section = ""
+        self.student = []
        
     }
     
@@ -53,6 +55,20 @@ class Course: NSObject{
        // self.todayAttendance =
         self.teacherID = (dict[Constants.teachers] as? String)!
         self.section = dict[Constants.section] as? String
+        self.numberOfStudent = Int(snapshot.childrenCount)
+        var studentList = [Student]()
+        var teacherInfo = Teacher()
+        
+        //==> Mark retrieve teacher info and list of student in this course
+        CourseServices.fetchListofStudent(courseKey: snapshot.key, completion: {students in
+            if students != nil {studentList = students!}
+        })
+        TeacherServices.retrieveTeacherInfo(WithUID: self.teacherID, completion: {teacher in
+            if teacher != nil { teacherInfo = teacher!}
+        })
+        
+         self.student = studentList
+        self.teacher = teacherInfo
     }
     
     func getStudent(withUID studentUID: String) -> Student{

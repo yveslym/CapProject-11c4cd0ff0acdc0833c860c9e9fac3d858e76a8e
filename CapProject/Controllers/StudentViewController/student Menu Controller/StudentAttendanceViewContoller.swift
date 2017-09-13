@@ -20,10 +20,10 @@ class StudentAttendanceViewContoller: UIViewController {
     
     /// function to setup the view before appear
     func configureVC(){
-        self.course.isHidden = true
-        self.section.isHidden = true
-        self.teacher.isHidden = true
-        self.markImage.isHidden = true
+        self.course.isHidden = false
+        self.section.isHidden = false
+        self.teacher.isHidden = false
+        self.markImage.isHidden = false
     }
     
     @IBAction func DoneButton(_ sender: Any) {
@@ -50,36 +50,18 @@ class StudentAttendanceViewContoller: UIViewController {
             
             var value = String(stringValue)!
             if value != ""{
-                
-               
-                
                 let keyArray = value.components(separatedBy: " ")
                 let courseIDScanned = keyArray[0] // retrieve the course key from scan code
                 let AttendanceScanned = keyArray[1] // retrieve attendance key from scan code
+                AttendanceServices.MarkPresent(courseKey: courseIDScanned, attendanceKey: AttendanceScanned)
                 
-                
-                AttendanceServices.MarkPresent(courseKey: courseIDScanned, attendanceKey: AttendanceScanned, completion: {attandance in
-                    
-                    if attandance != nil{
-                        AttendanceServices.storeAttandance(coursekey: courseIDScanned, attendance: attandance)
-                        
-                        CourseServices.fetchSingleCourse(typeOfUser:Constants.student, UserUID: NetworkConstant.currentUserUID!, courseKey: courseIDScanned, completion: {course in
-                            
-                            self.course.text = course?.courseName
-                            self.section.text = course?.section
-                            self.markImage.isHidden = false
-                            
-                            StudentServices.retrieveTeacherName(Withuid: course?.teacherID, completion: {(name) in
-                                
-                                if name != nil{
-                                    self.teacher.text = name
-                                }
-                            })
-                            
-                        })
-                    }
-                    else{
-                        print("couldn't take attendance")
+                CourseServices.fetchSingleCourse(courseKey: courseIDScanned, completion: {course in
+                  
+                    if course != nil{
+                        self.course.text = course?.courseName
+                        self.section.text = course?.section
+                        self.teacher.text = course?.teacher?.lastName
+                        self.configureVC()
                     }
                 })
             }

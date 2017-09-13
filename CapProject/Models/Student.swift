@@ -19,11 +19,9 @@ class Student: NSObject{
     let phoneNumber : Int?
     var uid : String?
     let type = "student"
-   var course = [Course]()
+    var course = [Course]()
     var level: String?
-    var listOfCourseKey = [String]()
-    //var listOfAttendanceKey = [String]()
-    var lisOfTeacherUID = [String]()
+   
     private static var _current: Student?
     
     static var current: Student{
@@ -51,7 +49,7 @@ class Student: NSObject{
         self.password  = password
         self.uid       = ""
         self.phoneNumber = 0
-
+        
     }
     
     init(firstname: String = "", lastname: String = "",Username:String = "",email:String = "", password:String = "", phone: Int = 0){
@@ -70,7 +68,7 @@ class Student: NSObject{
             
             else{return nil}
         
-       
+        
         self.firstName = dict[Constants.firstName] as? String
         self.username = dict[Constants.username] as? String
         self.lastName = dict[Constants.lastName] as? String
@@ -79,6 +77,27 @@ class Student: NSObject{
         self.phoneNumber = dict[Constants.phoneNumber] as? Int
         self.uid = dict[Constants.uid] as? String
         
+        var mycourse = [Course]()
+        
+        //==> Mark: fetch both list of course and attendance
+        
+        CourseServices.fetchStudentCourses(studentUID: NetworkConstant.currentUserUID!, completion: {courses in
+            
+            if courses != nil{
+                mycourse = courses!
+                
+                for course in mycourse{
+                    
+                    AttendanceServices.fetchAttendances(course: course, completion:{ AttendanceList in
+                        if AttendanceList != nil{
+                            course.attendance = AttendanceList!
+                        }
+                    })
+                }
+            }
+        })
+    
+        self.course = mycourse
     }
     
     class func setCurrent (_ student: Student, writeToUserDefault : Bool = false){
@@ -88,7 +107,7 @@ class Student: NSObject{
             let userType = UsersType()
             
             userType.saveStudent(withStudent: student, archivethisStudent: true)
-           // let data = NSKeyedArchiver.archivedData(withRootObject: userType)   //archive usertype with student data in it
+            // let data = NSKeyedArchiver.archivedData(withRootObject: userType)   //archive usertype with student data in it
             
             //UserDefaults.standard.set(userType, forKey: Constants.current)  //set user default
         } //end of archiving process
@@ -110,7 +129,7 @@ class Student: NSObject{
     func AddCourse (withCourse course: Course!){
         self.course.append(course)
     }
-
+    
 }
 
 

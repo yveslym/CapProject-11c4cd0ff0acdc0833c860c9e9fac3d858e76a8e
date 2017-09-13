@@ -15,19 +15,6 @@ import Firebase
 
 class AttendanceServices: NSObject{
     
-    static func createAttendanceKey(courseKey: String!, completion: @escaping (String)->Void){
-        
-        var ref = Database.database().reference().child(Constants.attendance).child(NetworkConstant.currentUserUID!).child(courseKey).childByAutoId()
-        let attkey = ref.key
-        
-        ref = ref.child(Constants.attendance)
-        
-        let atts = [Constants.AttendanceKey: attkey]
-        
-        ref.setValue(atts)
-        
-        return completion(attkey)
-    }
     
     /// function to punch in student (mark present when student is on time)
     ///
@@ -35,26 +22,25 @@ class AttendanceServices: NSObject{
     ///   - courseKey: pass the course key get from the qr code when scanned
     ///   - attendanceKey: get the attendance key geot from the qr code when scanned
     ///   - completion: return the new attendance
-    static func MarkPresent( courseKey: String!, attendanceKey: String!, completion: @escaping(Attendance?)->Void){
+    static func MarkPresent( courseKey: String!, attendanceKey: String!){
         
-        let ref = Database.database().reference().child(Constants.attendance).child(NetworkConstant.currentUserUID!).child(courseKey).child(attendanceKey)
+        let ref = NetworkConstant.attencace.attendanceRef(withCourseKey: courseKey, studentUID: NetworkConstant.currentUserUID!).child(attendanceKey)
+        
+        
         /*
          need to add time operations, such what register the real time the student punch in
          */
         
-        let atts = [Constants.present:Constants.True, Constants.absent: Constants.False, Constants.late : Constants.False, Constants.AttendanceKey: ref.key]
+        let atts = [Constants.present:Constants.True, Constants.absent: Constants.False, Constants.late : Constants.False, Constants.AttendanceKey: attendanceKey]
         
         ref.setValue(atts)
         
-        let attandance = Attendance()
-        attandance.present = true
-        attandance.late = false
-        attandance.absent = false
-        attandance.AttendanceID = attendanceKey
-        
-        return completion(attandance)
-        
-        //Attendance.
+        let attendance = Attendance()
+        attendance.present = true
+        attendance.late = false
+        attendance.absent = false
+        attendance.AttendanceID = attendanceKey
+        AttendanceServices.storeAttandance(coursekey: courseKey, attendance: attendance)
     }
     
     /// function to mark student absent
@@ -63,22 +49,23 @@ class AttendanceServices: NSObject{
     ///   - courseKey: pass the course key get from the qr code when scanned
     ///   - attendanceKey: get the attendance key geot from the qr code when scanned
     ///   - completion: return the new attendance
-    static func MarkLate ( courseKey: String!, attendanceKey: String!, completion: @escaping(Attendance?)->Void){
+    static func MarkLate ( courseKey: String!, attendanceKey: String!){
         
-        let ref = Database.database().reference().child(Constants.attendance).child(NetworkConstant.currentUserUID!).child(courseKey).child(attendanceKey)
+        let ref = NetworkConstant.attencace.attendanceRef(withCourseKey: courseKey, studentUID: NetworkConstant.currentUserUID!).child(attendanceKey)
+
         /*
          need to add time operations, such what register the real time the student punch in
          */
-        let atts = [Constants.present:Constants.False, Constants.absent: Constants.False, Constants.late : Constants.True, Constants.AttendanceKey: ref.key]
+        let atts = [Constants.present:Constants.False, Constants.absent: Constants.False, Constants.late : Constants.True, Constants.AttendanceKey: attendanceKey]
         
         ref.setValue(atts)
         
-        let attandance = Attendance()
-        attandance.present = false
-        attandance.late = true
-        attandance.absent = false
+        let attendance = Attendance()
+        attendance.present = false
+        attendance.late = true
+        attendance.absent = false
         
-        return completion(attandance)
+        AttendanceServices.storeAttandance(coursekey: courseKey, attendance: attendance)
     }
     
     
@@ -88,33 +75,31 @@ class AttendanceServices: NSObject{
     ///   - courseKey: pass the course key get from the qr code when scanned
     ///   - attendanceKey: get the attendance key geot from the qr code when scanned
     ///   - completion: return the new attendance
-    static func MarkAbsent ( courseKey: String!, attendanceKey: String!, completion: @escaping(Attendance?)->Void){
+    static func MarkAbsent ( courseKey: String!, attendanceKey: String!){
         
-        let ref = Database.database().reference().child(Constants.attendance).child(NetworkConstant.currentUserUID!).child(courseKey).child(attendanceKey)
+        let ref = NetworkConstant.attencace.attendanceRef(withCourseKey: courseKey, studentUID: NetworkConstant.currentUserUID!).child(attendanceKey)
+        
         /*
          need to add time operations, such what register the real time the student punch in
          */
-        let atts = [Constants.present:Constants.False, Constants.absent: Constants.True, Constants.late : Constants.False, Constants.AttendanceKey: ref.key]
+        let atts = [Constants.present:Constants.False, Constants.absent: Constants.True, Constants.late : Constants.False, Constants.AttendanceKey: attendanceKey]
         
         ref.setValue(atts)
         
-        let attandance = Attendance()
-        attandance.present = false
-        attandance.late = false
-        attandance.absent = true
-        
-        return completion(attandance)
-        
+        let attendance = Attendance()
+        attendance.present = false
+        attendance.late = false
+        attendance.absent = true
+    AttendanceServices.storeAttandance(coursekey: courseKey, attendance: attendance)
     }
     
     /// function to fetch all attendance stored under an specific student,
     ///and specific course
     /// - Parameters:
     ///   - course: pass the course
-    ///   - completion: retourn list of attendances
-    static func fetchAttendances(course: Course!, completion: @escaping ([Attendance?])-> Void){
+    static func fetchAttendances(course: Course!, completion: @escaping ([Attendance]?)-> Void){
         
-        let ref = Database.database().reference().child(Constants.attendance).child(NetworkConstant.currentUserUID!).child(course.courseID!)
+        let ref = NetworkConstant.attencace.attendanceRef(withCourseKey: course.courseID, studentUID: NetworkConstant.currentUserUID!)
         
         ref.observeSingleEvent(of: .value, with: {snapshot in
             
@@ -133,13 +118,15 @@ class AttendanceServices: NSObject{
     ///   - attendance: pass the attandance info
     static func storeAttandance(coursekey: String!, attendance: Attendance!){
         
-        let ref = Database.database().reference().child(Constants.attendance).child(NetworkConstant.currentUserUID!).child(coursekey).child(attendance.AttendanceID)
+//        let ref = Database.database().reference().child(Constants.attendance).child(NetworkConstant.currentUserUID!).child(coursekey).child(attendance.AttendanceID)
+        
+        let ref = NetworkConstant.attencace.attendanceRef(withCourseKey: coursekey, studentUID: NetworkConstant.currentUserUID!).child(attendance.AttendanceID)
+
         
         let atts = [Constants.present: String(attendance.present), Constants.absent:String(attendance.absent), Constants.late: String(attendance.late), Constants.AttendanceKey:attendance.AttendanceID]
         
         ref.setValue(atts)
     }
-    
 }
 
 

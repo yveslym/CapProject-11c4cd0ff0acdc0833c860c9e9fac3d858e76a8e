@@ -65,7 +65,7 @@ class ListOfProfessorTableViewController: UITableViewController {
         
         CourseServices.fetchStudentCourses(studentUID: NetworkConstant.currentUserUID!, completion: {(courseList) in
           
-            Student.current.course = courseList
+            Student.current.course = courseList!
         })
             }
 

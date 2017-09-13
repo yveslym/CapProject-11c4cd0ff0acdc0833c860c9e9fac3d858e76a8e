@@ -56,15 +56,6 @@ struct NetworkConstant
     
     //==> Mark Teacher Update
     struct Teacher {
-        
-    
-    
-   // static func AddTeacherinDatabase(withTeacher teacher: Teacher){
-        
-//        let Attrs = [Constants.firstName: teacher.firstName,Constants.lastName: teacher.lastName, Constants.email: teacher.email, Constants.uid:NetworkConstant.currentUserUID]
-//        NetworkConstant.teacherInfoRef.setValue(Attrs)
-//    }
-    
     static func updateUsername(withUsername username: String){
         NetworkConstant.teacherInfoRef.updateChildValues([Constants.username:username])
     }
@@ -93,20 +84,41 @@ struct NetworkConstant
     //==> Mark: attendance ref
     
     struct attencace {
-        //returnning an existing attendance path
-        static func attendanceRef (withCourseKey key:String, AttendanceKey: String)->DatabaseReference{
-            
-            return NetworkConstant.course.attendenceRef.child(key).child(Constants.attendance).child(AttendanceKey)
-        }
+       
         
-        static func newAttendance (withCourseKey courseKey:String)->DatabaseReference?{
-            let ref = NetworkConstant.course.attendenceRef.child(courseKey)
-            if !(ref.key.isEmpty){
-                ref.child(Constants.attendance).childByAutoId()
-                print ("new atendance added")
-            }
-            return ref
+        /// function that return the attendance ref
+        /// P.S: THE FUNCTION DOESN'T TAKE THE ATTENDANCE KEY,
+        /// ATTENDANCE KEY NEED TO BE ADD AS CHILD
+        /// this fonction can be use to fetch all attendance or one attendance (implicitly)
+        /// - Parameters:
+        ///   - courseKey: pass the course key
+        ///   - studentUID: pass the student UID
+        /// - Returns: return the reference path
+        static func attendanceRef (withCourseKey courseKey:String!, studentUID: String!)->DatabaseReference{
+            
+           return Database.database().reference().child(Constants.attendance).child(Constants.course).child(courseKey).child(Constants.student).child(studentUID).child(Constants.AttendanceKey)
         }
     }
+    
+    static var generateKey: String{
+        
+        let ref = Database.database().reference().childByAutoId()
+        let gen = ref.key
+        
+        return gen
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
 

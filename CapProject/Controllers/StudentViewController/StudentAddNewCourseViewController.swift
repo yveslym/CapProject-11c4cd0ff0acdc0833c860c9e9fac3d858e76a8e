@@ -24,19 +24,7 @@ class StudentAddNewCourseViewController: UIViewController {
     
     @IBOutlet weak var teacherName: UILabel!
     
-    @IBOutlet weak var ScanCourse: UIButton!
-    
-    // var newcourse = Course()
-    
     let scanner = QRCode()
-    
-    
-    
-    @IBAction func scancourseTapped(_ sender: Any) {
-        
-        self.performSegue(withIdentifier: "scan", sender: self)
-    }
-    
     
     @IBAction func doneButtonTapped(_ sender: Any) {
         
@@ -48,8 +36,6 @@ class StudentAddNewCourseViewController: UIViewController {
     @IBAction func cancelCourse(_ sender: Any) {
         if  Student.current.course.count-1 > 0{
             Student.current.course.remove(at: Student.current.course.count-1)
-            
-            
         }
         let initialVC = UIStoryboard.initialViewController(for: .main)
         self.view.window?.rootViewController = initialVC
@@ -68,26 +54,18 @@ class StudentAddNewCourseViewController: UIViewController {
                 
                 print(keys!)
                 let keyArray = keys?.components(separatedBy: " ")
-                let teacherKey = keyArray?[0]
+                _ = keyArray?[0]
                 let courseKey = keyArray?[1]
                 
-                CourseServices.fetchSingleCourse(typeOfUser: Constants.teachers, UserUID: teacherKey, courseKey: courseKey, completion: {course in
+                CourseServices.fetchSingleCourse(courseKey: courseKey, completion: {course in
                     
                     if course != nil{
                         CourseServices.StoreCourse(course: course!)
-                        self.name.text = course.courseName
-                        self.section.text = course.section
-                        print("course id:\(course.courseID!) line 80")
-                        
-                        
-                        TeacherServices.retrieveTeacherInfo(WithUID: teacherKey, completion: { teacher in
-                          
-                            if teacher != nil{
-                                self.teacherName.text = teacher?.firstName
-                                                            }
-                        })
-                        
-                      self.configureVC()
+                        self.name.text = course?.courseName
+                        self.section.text = course?.section
+                        self.teacherName.text = course?.teacher?.lastName
+                        //print("course id:\(course?.courseID!) line 80")
+                        self.configureVC()
                     }
                     
                 })

@@ -62,7 +62,6 @@
 		20F82D561F378BDC0011A5FD /* chooseUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F82D551F378BDC0011A5FD /* chooseUserViewController.swift */; };
 		20F82D581F37D5C20011A5FD /* StudentLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F82D571F37D5C20011A5FD /* StudentLoginViewController.swift */; };
 		20F82D5A1F37DFCD0011A5FD /* studentRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F82D591F37DFCD0011A5FD /* studentRegisterViewController.swift */; };
-		20F9E1551F461A0D00A9FE4B /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F9E1541F461A0D00A9FE4B /* QRScannerViewController.swift */; };
 		20FE85901F34DF4A00C9FA9D /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE858F1F34DF4A00C9FA9D /* Storyboard+Utility.swift */; };
 		20FE85921F34E8B000C9FA9D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20FE85911F34E8B000C9FA9D /* Login.storyboard */; };
 		A13C5FC199FD940C44B2B104 /* Pods_CapProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D3C796D3874828CF6A042A /* Pods_CapProject.framework */; };
@@ -130,7 +129,6 @@
 		20F82D551F378BDC0011A5FD /* chooseUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = chooseUserViewController.swift; path = Controllers/chooseUserViewController.swift; sourceTree = "<group>"; };
 		20F82D571F37D5C20011A5FD /* StudentLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentLoginViewController.swift; path = Controllers/StudentLoginViewController.swift; sourceTree = "<group>"; };
 		20F82D591F37DFCD0011A5FD /* studentRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = studentRegisterViewController.swift; path = Controllers/studentRegisterViewController.swift; sourceTree = "<group>"; };
-		20F9E1541F461A0D00A9FE4B /* QRScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QRScannerViewController.swift; path = Controllers/QRScannerViewController.swift; sourceTree = "<group>"; };
 		20FE858F1F34DF4A00C9FA9D /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Storyboard+Utility.swift"; path = "Service Supporting/Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		20FE85911F34E8B000C9FA9D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Storyboards/Login.storyboard; sourceTree = "<group>"; };
 		25EEB518E361AE18DF3C2DA9 /* Pods-CapProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-CapProject/Pods-CapProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -256,7 +254,6 @@
 				205296C81F3A4A9100EBC8BA /* Student View Controller */,
 				205296C91F3A4AB300EBC8BA /* Teacher View Controller */,
 				205296CA1F3A4B6B00EBC8BA /* Intro View Controllers */,
-				20F9E1541F461A0D00A9FE4B /* QRScannerViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -523,7 +520,6 @@
 				202290A41F3C20D1001FC4BC /* StudentSideBarMenuTableViewController.swift in Sources */,
 				20C43BE71F2EE9CB00C689D3 /* CapProject.xcdatamodeld in Sources */,
 				2064A3271F3CA90900EC5C27 /* StudentScheduleViewController.swift in Sources */,
-				20F9E1551F461A0D00A9FE4B /* QRScannerViewController.swift in Sources */,
 				20DE92FD1F4B5B7900BB0EC4 /* TeacherAddCourseTableViewController.swift in Sources */,
 				20C43C0B1F2FA28300C689D3 /* StudentService.swift in Sources */,
 				2064A32B1F3CA9B600EC5C27 /* StudentAttendanceViewContoller.swift in Sources */,

@@ -161,16 +161,13 @@ class TeacherServices{
             if course != nil{
                 let courseID = course?[index].courseID
                 
-                AttendanceServices.createAttendanceKey(courseKey: courseID, completion: { attendanceCode in
+               let attendanceCode = NetworkConstant.generateKey
                     
                     iconView.image = QRCode.generateImage("\(courseID!) \(attendanceCode)", avatarImage: UIImage(named: "avatar"), avatarScale: 0.3)
-                    
-                })
             }
             
         })
     }
-    
 }
 
 
