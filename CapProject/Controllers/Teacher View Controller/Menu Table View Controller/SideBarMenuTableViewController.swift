@@ -13,9 +13,6 @@ class SideBarMenuTableViewController: UITableViewController {
     @IBOutlet weak var fnames: UILabel!
     @IBOutlet weak var profileCell: UITableViewCell!
     
-    @IBOutlet weak var attendanceCell: UITableViewCell!
-    @IBOutlet weak var AddStudentCell: UITableViewCell!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,14 +30,6 @@ class SideBarMenuTableViewController: UITableViewController {
         
     }
     
-    func select(){
-        if self.AddStudentCell.isSelected{
-            Helpers.addStudent = true
-        }
-        else if attendanceCell.isSelected{
-            Helpers.createAttendance = true
-        }
-    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -51,7 +40,12 @@ class SideBarMenuTableViewController: UITableViewController {
         }
     }
     
+        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellProfile", for: indexPath)
     
+            return cell
+       }
+
     
     
     

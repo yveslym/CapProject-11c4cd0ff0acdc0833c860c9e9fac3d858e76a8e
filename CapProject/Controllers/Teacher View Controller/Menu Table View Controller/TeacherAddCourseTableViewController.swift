@@ -102,14 +102,20 @@ class TeacherAddCourseTableViewController: UITableViewController {
                 }
                 else{print ("course not added for a stupid whatever reason")}
             })
-        self.performSegue(withIdentifier: "home", sender: self)
+            let initialVC = UIStoryboard.initialViewController(for: .Teachermain)
+            self.view.window?.rootViewController = initialVC
+            self.view.window?.makeKeyAndVisible()
+
         }
         else {print("cannot add course")}
     }
     
     
     @IBAction func cancel(_ sender: Any) {
-        self.performSegue(withIdentifier: "home", sender: self)
+        let initialVC = UIStoryboard.initialViewController(for: .Teachermain)
+        self.view.window?.rootViewController = initialVC
+        self.view.window?.makeKeyAndVisible()
+
     }
     
     

@@ -46,6 +46,9 @@
 		20C43C091F2F9DC000C689D3 /* TeacherServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C43C081F2F9DC000C689D3 /* TeacherServices.swift */; };
 		20C43C0B1F2FA28300C689D3 /* StudentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C43C0A1F2FA28300C689D3 /* StudentService.swift */; };
 		20C7E7FA1F3FA36600B92601 /* StudentProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7E7F91F3FA36600B92601 /* StudentProfileViewController.swift */; };
+		20C815FC1F68C54900618C5B /* TeacherProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C815FB1F68C54900618C5B /* TeacherProfileTableViewCell.swift */; };
+		20C815FE1F690D1200618C5B /* TeacherListOfStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C815FD1F690D1200618C5B /* TeacherListOfStudentViewController.swift */; };
+		20C816001F699BE400618C5B /* TeacherListOfStudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C815FF1F699BE400618C5B /* TeacherListOfStudentTableViewCell.swift */; };
 		20DE92F51F4B47F300BB0EC4 /* SideBarMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE92F41F4B47F300BB0EC4 /* SideBarMenuTableViewController.swift */; };
 		20DE92F71F4B4C0D00BB0EC4 /* TeacherCourseListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE92F61F4B4C0D00BB0EC4 /* TeacherCourseListTableViewController.swift */; };
 		20DE92F91F4B549700BB0EC4 /* teacherListOfClassMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DE92F81F4B549700BB0EC4 /* teacherListOfClassMenu.swift */; };
@@ -113,6 +116,9 @@
 		20C43C081F2F9DC000C689D3 /* TeacherServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeacherServices.swift; path = Services/TeacherServices.swift; sourceTree = "<group>"; };
 		20C43C0A1F2FA28300C689D3 /* StudentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentService.swift; path = Services/StudentService.swift; sourceTree = "<group>"; };
 		20C7E7F91F3FA36600B92601 /* StudentProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentProfileViewController.swift; path = Controllers/StudentViewController/StudentProfileViewController.swift; sourceTree = "<group>"; };
+		20C815FB1F68C54900618C5B /* TeacherProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeacherProfileTableViewCell.swift; path = Views/TeacherProfileTableViewCell.swift; sourceTree = "<group>"; };
+		20C815FD1F690D1200618C5B /* TeacherListOfStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeacherListOfStudentViewController.swift; path = "Controllers/Teacher View Controller/Menu Table View Controller/TeacherListOfStudentViewController.swift"; sourceTree = "<group>"; };
+		20C815FF1F699BE400618C5B /* TeacherListOfStudentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeacherListOfStudentTableViewCell.swift; path = Views/TeacherListOfStudentTableViewCell.swift; sourceTree = "<group>"; };
 		20DE92F41F4B47F300BB0EC4 /* SideBarMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideBarMenuTableViewController.swift; path = "Controllers/Teacher View Controller/Menu Table View Controller/SideBarMenuTableViewController.swift"; sourceTree = "<group>"; };
 		20DE92F61F4B4C0D00BB0EC4 /* TeacherCourseListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeacherCourseListTableViewController.swift; path = "Controllers/Teacher View Controller/Menu Table View Controller/TeacherCourseListTableViewController.swift"; sourceTree = "<group>"; };
 		20DE92F81F4B549700BB0EC4 /* teacherListOfClassMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = teacherListOfClassMenu.swift; path = "Controllers/Teacher View Controller/Menu Table View Controller/teacherListOfClassMenu.swift"; sourceTree = "<group>"; };
@@ -278,6 +284,8 @@
 				20C43C001F2EFB6E00C689D3 /* user.swift */,
 				20323CB61F4F2BC7006F1E10 /* TeacherLIstOfCourseTableViewCell.swift */,
 				20ED86F81F50F2600020A4BB /* StudentListOfTeacherTableViewCell.swift */,
+				20C815FB1F68C54900618C5B /* TeacherProfileTableViewCell.swift */,
+				20C815FF1F699BE400618C5B /* TeacherListOfStudentTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -324,6 +332,7 @@
 				20ED86FC1F51332F0020A4BB /* TeacherSideBarViewController.swift */,
 				20ED86FE1F514F9A0020A4BB /* MyCoursesTableViewController.swift */,
 				2080EF961F6616E900D84B59 /* TeacherTakeAttendanceViewController.swift */,
+				20C815FD1F690D1200618C5B /* TeacherListOfStudentViewController.swift */,
 			);
 			name = "Menu View Controller";
 			sourceTree = "<group>";
@@ -481,6 +490,7 @@
 				2070800E1F4D0A1C006AF326 /* TeacherProfileViewController.swift in Sources */,
 				20DE92F51F4B47F300BB0EC4 /* SideBarMenuTableViewController.swift in Sources */,
 				20DE92F71F4B4C0D00BB0EC4 /* TeacherCourseListTableViewController.swift in Sources */,
+				20C815FE1F690D1200618C5B /* TeacherListOfStudentViewController.swift in Sources */,
 				2001AD171F3D6771006DA313 /* PostService.swift in Sources */,
 				205296D01F3B6FE100EBC8BA /* SWRevealViewController.m in Sources */,
 				20323C751F4E1FFE006F1E10 /* TeacherHomePageTableViewController.swift in Sources */,
@@ -499,6 +509,7 @@
 				20F82D561F378BDC0011A5FD /* chooseUserViewController.swift in Sources */,
 				20C43BDF1F2EE9CA00C689D3 /* AppDelegate.swift in Sources */,
 				20C43C071F2F9C0100C689D3 /* Teacher.swift in Sources */,
+				20C816001F699BE400618C5B /* TeacherListOfStudentTableViewCell.swift in Sources */,
 				205752D51F3388FB00EB88B7 /* Helpers.swift in Sources */,
 				205296C31F3A14A200EBC8BA /* Classes.swift in Sources */,
 				20ED86F91F50F2600020A4BB /* StudentListOfTeacherTableViewCell.swift in Sources */,
@@ -517,6 +528,7 @@
 				20C43C051F2F9BCC00C689D3 /* Student.swift in Sources */,
 				20DE92F91F4B549700BB0EC4 /* teacherListOfClassMenu.swift in Sources */,
 				20397CB01F4C8E350073F150 /* LoginViewController.swift in Sources */,
+				20C815FC1F68C54900618C5B /* TeacherProfileTableViewCell.swift in Sources */,
 				202290A41F3C20D1001FC4BC /* StudentSideBarMenuTableViewController.swift in Sources */,
 				20C43BE71F2EE9CB00C689D3 /* CapProject.xcdatamodeld in Sources */,
 				2064A3271F3CA90900EC5C27 /* StudentScheduleViewController.swift in Sources */,
