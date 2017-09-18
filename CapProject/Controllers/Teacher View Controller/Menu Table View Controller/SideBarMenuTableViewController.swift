@@ -10,9 +10,9 @@ import UIKit
 
 class SideBarMenuTableViewController: UITableViewController {
 
-    @IBOutlet weak var fnames: UILabel!
-    @IBOutlet weak var profileCell: UITableViewCell!
+    @IBOutlet weak var cell: TeacherProfileTableViewCell!
     
+    var course =  [Course]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,11 @@ class SideBarMenuTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        
+        CourseServices.fetchTeacherCourses(teacherUID: NetworkConstant.currentUserUID!, completion: {courses in
+       
+            guard let courses = courses else {return}
+            self.course = courses
+        })
     }
     
     
@@ -40,11 +44,13 @@ class SideBarMenuTableViewController: UITableViewController {
         }
     }
     
-        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cellProfile", for: indexPath)
-    
-            return cell
-       }
+//        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+////            let cell = tableView.dequeueReusableCell(withIdentifier: "teacherProfile", for: indexPath) as! TeacherProfileTableViewCell
+//            self.cell.firstName.text = Teacher.current.firstName
+//            self.cell.lastName.text = Teacher.current.lastName
+//            self.cell.numberOfCourses.text = String(self.course.count)
+//            return self.cell
+//       }
 
     
     

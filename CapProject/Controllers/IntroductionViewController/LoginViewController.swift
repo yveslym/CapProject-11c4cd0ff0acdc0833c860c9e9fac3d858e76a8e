@@ -10,10 +10,6 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    var teacherSelected : Bool?
-    var studentSelected : Bool?
-    
-    
     @IBOutlet weak var email: UITextField!
     
     @IBOutlet weak var password: UITextField!

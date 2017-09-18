@@ -11,22 +11,23 @@ import ActionSheetPicker_3_0
 
 class TeacherListOfStudentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    @IBOutlet weak var listTableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var selectCourse: UITextField!
     var index = Int()
     var courseName = [String]()
     var course = [Course]()
     var attendance = [Attendance]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.listTableView.delegate = self
-        self.listTableView.dataSource = self as? UITableViewDataSource
+        self.tableView.delegate = self
+         self.tableView.dataSource = self
         
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.fetchCourse()
+        //self.fetchCourse()
     }
     
     func fetchCourse(){
@@ -38,6 +39,17 @@ class TeacherListOfStudentViewController: UIViewController, UITableViewDelegate,
             }
             self.course = listOfCourse!
         })
+    }
+    
+    @IBAction func doneButton(_ sender: Any){
+    
+        let initialVC = UIStoryboard.initialViewController(for: .Teachermain)
+        
+        self.view.window?.rootViewController = initialVC
+        //self.dismiss(animated: true, completion: nil)
+        
+        self.viewDidDisappear(true)
+        self.view.window?.makeKeyAndVisible()
     }
     
     @IBAction func SelectCourse(_ sender: Any){
@@ -74,21 +86,21 @@ class TeacherListOfStudentViewController: UIViewController, UITableViewDelegate,
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.course[self.index].student.count
+        return 1//1self.course[self.index].student.count
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
     
-    func tableView(tableview: UITableView, numberOfRowInSection section: Int)-> Int{
-        return self.course.count
-    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "studentList", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "studentList", for: indexPath) as! TeacherListOfStudentTableViewCell
+        //let student = self.course[self.index].student[indexPath.row]
         
+        cell.firstName.text = "yves" //student.firstName ?? ""
+        cell.lastName.text = "songolo"//student.lastName ?? ""
+        cell.studentLevel.text = "undergraduate"//student.level ?? ""
         
-        let course = self.course[indexPath.row]
      return cell
     }
 }

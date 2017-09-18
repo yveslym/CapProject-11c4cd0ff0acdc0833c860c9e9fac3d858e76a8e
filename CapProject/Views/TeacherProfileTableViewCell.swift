@@ -12,9 +12,8 @@ class TeacherProfileTableViewCell: UITableViewCell {
 
     @IBOutlet weak var firstName: UILabel!
     @IBOutlet weak var lastName: UILabel!
-    @IBOutlet weak var studentLevel: UILabel!
-    @IBOutlet weak var attendanceMark: UIImageView!
-    @IBOutlet weak var studentProfilePicture: UIImageView!
+    @IBOutlet weak var numberOfCourses: UILabel!
+    @IBOutlet weak var teacherProfilePicture: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

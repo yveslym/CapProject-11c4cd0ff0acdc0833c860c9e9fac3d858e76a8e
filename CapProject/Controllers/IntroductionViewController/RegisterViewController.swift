@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 import Firebase
-class RegisterViewController: UIViewController, UITextFieldDelegate {
+class RegisterViewController: UIViewController {
     
     
     @IBOutlet weak var email: UITextField!
@@ -20,6 +20,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var confirmPassword: UITextField!
     
     @IBOutlet weak var errorMessage: UILabel!
+    
+     @IBOutlet weak var loginButton: UIButton!
     
     /// function to check either the password and confirm password is the same
     /// if they are different return an error message and disable the login button
@@ -40,11 +42,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     }
     
-    @IBOutlet weak var loginButton: UIButton!
-    var studentSelected: Bool?
-    var teacherSelected: Bool?
-    
-    
         func checkPassword(){
         if self.password != self.confirmPassword{
             self.loginButton.isEnabled = false
@@ -57,15 +54,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             self.loginButton.isEnabled = true
             self.errorMessage.isHidden = true
         }
-    }
-    
-    @IBAction func cancel(_ sender: Any) {
-        
-        Helpers.studentSelected = false
-        Helpers.teacherSelected = false
-        let initialVC = UIStoryboard.initialViewController(for: .login)
-        self.view.window?.rootViewController = initialVC
-        self.view.window?.makeKeyAndVisible()
     }
     
     
@@ -97,8 +85,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.confirmPassword.delegate = self
         self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
