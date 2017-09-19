@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TeacherProfileViewController: UIViewController {
+class TeacherProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
     @IBOutlet weak var firstName: UITextField!
@@ -17,7 +17,46 @@ class TeacherProfileViewController: UIViewController {
     
     @IBOutlet weak var userName: UITextField!
     
+    @IBOutlet weak var phoneNumber: UITextField!
+    
+    @IBOutlet weak var profilePicture: UIImageView!
+    
     let teacher = Teacher()
+    
+    
+    @IBAction func changeImage(_ sender: Any) {
+        
+        self.profilePicture.isHighlighted = true
+        
+        let imagepicker = UIImagePickerController()
+        imagepicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        imagepicker.delegate = self
+        present(imagepicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func setupProfileImage(){
+        // self.profilePicture.translatesAutoresizingMaskIntoConstraints = false
+        self.profilePicture.contentMode = .scaleAspectFit
+        self.profilePicture.isUserInteractionEnabled = true
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+        {
+            self.profilePicture.image = originalImage
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+
+    
     
     @IBAction func continueButtonTapped(_ sender: Any) {
         
@@ -31,6 +70,8 @@ class TeacherProfileViewController: UIViewController {
         NetworkConstant.Teacher.updateLastName(lastname: lastName.text!)
         NetworkConstant.Teacher.updateUsername(withUsername: userName.text!)
         
+        NetworkConstant.Teacher.updateNumber(withNumber: Int(self.phoneNumber.text!)!)
+        
         //call the main page
         let initialVC = UIStoryboard.initialViewController(for: .Teachermain)
         self.view.window?.rootViewController = initialVC
@@ -41,6 +82,7 @@ class TeacherProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupProfileImage()
         
         // Do any additional setup after loading the view.
     }
