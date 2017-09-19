@@ -115,7 +115,7 @@
                         <outlet property="loginButton" destination="agm-jX-jxi" id="OXw-Vz-oRk"/>
                         <outlet property="password" destination="wvC-fl-inN" id="fMS-Cl-Koy"/>
                         <segue destination="x1E-Fa-XC9" kind="show" identifier="studentProfile" id="Kuf-0U-6Uv"/>
-                        <segue destination="20f-IF-8YM" kind="show" id="nYL-rg-uQq"/>
+                        <segue destination="20f-IF-8YM" kind="show" identifier="teacherProfile" id="nYL-rg-uQq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gaL-sW-pv1" userLabel="First Responder" sceneMemberID="firstResponder"/>

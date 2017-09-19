@@ -17,6 +17,8 @@
 		20397CB01F4C8E350073F150 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20397CAF1F4C8E350073F150 /* LoginViewController.swift */; };
 		20397CB21F4CA0CA0073F150 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20397CB11F4CA0CA0073F150 /* RegisterViewController.swift */; };
 		204EED601F30D81800F89A58 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204EED5F1F30D81800F89A58 /* Constants.swift */; };
+		204FCCCD1F7102A700149F3A /* StorageServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204FCCCC1F7102A700149F3A /* StorageServices.swift */; };
+		204FCCCF1F71054A00149F3A /* PictureStorageServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204FCCCE1F71054A00149F3A /* PictureStorageServices.swift */; };
 		205296BF1F3A00A300EBC8BA /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205296BE1F3A00A000EBC8BA /* Course.swift */; };
 		205296C11F3A0A3800EBC8BA /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205296C01F3A0A3700EBC8BA /* Attendance.swift */; };
 		205296C31F3A14A200EBC8BA /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205296C21F3A14A200EBC8BA /* Classes.swift */; };
@@ -83,6 +85,8 @@
 		20397CAF1F4C8E350073F150 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/IntroductionViewController/LoginViewController.swift; sourceTree = "<group>"; };
 		20397CB11F4CA0CA0073F150 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = Controllers/IntroductionViewController/RegisterViewController.swift; sourceTree = "<group>"; };
 		204EED5F1F30D81800F89A58 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "Service Supporting/Constants.swift"; sourceTree = "<group>"; };
+		204FCCCC1F7102A700149F3A /* StorageServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StorageServices.swift; path = Services/StorageServices.swift; sourceTree = "<group>"; };
+		204FCCCE1F71054A00149F3A /* PictureStorageServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PictureStorageServices.swift; path = Services/PictureStorageServices.swift; sourceTree = "<group>"; };
 		205296BE1F3A00A000EBC8BA /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Course.swift; path = Models/Course.swift; sourceTree = "<group>"; };
 		205296C01F3A0A3700EBC8BA /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Attendance.swift; path = Models/Attendance.swift; sourceTree = "<group>"; };
 		205296C21F3A14A200EBC8BA /* Classes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
@@ -316,6 +320,8 @@
 				2001AD161F3D6771006DA313 /* PostService.swift */,
 				207912581F424F6300BF4C4A /* AttendanceServices.swift */,
 				20EA5FBF1F43475F0087C869 /* CourseServices.swift */,
+				204FCCCC1F7102A700149F3A /* StorageServices.swift */,
+				204FCCCE1F71054A00149F3A /* PictureStorageServices.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -486,6 +492,7 @@
 				2064A35B1F3CD52C00EC5C27 /* StudentHomePageTableViewController.swift in Sources */,
 				20EA5FC01F43475F0087C869 /* CourseServices.swift in Sources */,
 				20DE92FB1F4B5A4F00BB0EC4 /* TeacherAddStudentViewController.swift in Sources */,
+				204FCCCF1F71054A00149F3A /* PictureStorageServices.swift in Sources */,
 				209FB2591F358D670086B74B /* UserType.swift in Sources */,
 				2070800E1F4D0A1C006AF326 /* TeacherProfileViewController.swift in Sources */,
 				20DE92F51F4B47F300BB0EC4 /* SideBarMenuTableViewController.swift in Sources */,
@@ -493,6 +500,7 @@
 				20C815FE1F690D1200618C5B /* TeacherListOfStudentViewController.swift in Sources */,
 				2001AD171F3D6771006DA313 /* PostService.swift in Sources */,
 				205296D01F3B6FE100EBC8BA /* SWRevealViewController.m in Sources */,
+				204FCCCD1F7102A700149F3A /* StorageServices.swift in Sources */,
 				20323C751F4E1FFE006F1E10 /* TeacherHomePageTableViewController.swift in Sources */,
 				20C43C091F2F9DC000C689D3 /* TeacherServices.swift in Sources */,
 				20ED86FF1F514F9A0020A4BB /* MyCoursesTableViewController.swift in Sources */,

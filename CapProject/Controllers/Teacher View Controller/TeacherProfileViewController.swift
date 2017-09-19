@@ -72,6 +72,8 @@ class TeacherProfileViewController: UIViewController, UIImagePickerControllerDel
         
         NetworkConstant.Teacher.updateNumber(withNumber: Int(self.phoneNumber.text!)!)
         
+        PictureStorageServices.createProfilePicture(for: self.profilePicture.image!)
+        
         //call the main page
         let initialVC = UIStoryboard.initialViewController(for: .Teachermain)
         self.view.window?.rootViewController = initialVC

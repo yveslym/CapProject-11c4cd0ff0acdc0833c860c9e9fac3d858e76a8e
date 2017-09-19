@@ -49,6 +49,7 @@ struct Constants{
     static let info = "info"
     static let attendanceInfo = "attendance Info"
     static let studentList = "list of student"
+    static let profilePic = "profile picture"
     }
 
 

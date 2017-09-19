@@ -88,7 +88,7 @@ class StudentProfileViewController: UIViewController, UIImagePickerControllerDel
         NetworkConstant.Student.UpdateUsername(withUsername: username.text!)
         NetworkConstant.Student.UpdateLevel(level: self.educationLevel.text)
         NetworkConstant.Student.UpdatephoneNumber(withNumber: Int(self.phoneNumber.text!)!)
-        
+         PictureStorageServices.createProfilePicture(for: self.profilePicture.image!)
         //call the main page
         self.viewDidAppear(true)
         let initialVC = UIStoryboard.initialViewController(for: .main)
