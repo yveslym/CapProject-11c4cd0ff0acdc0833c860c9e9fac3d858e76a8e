@@ -91,7 +91,4 @@ class TeacherProfileViewController: UIViewController, UIImagePickerControllerDel
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
 }

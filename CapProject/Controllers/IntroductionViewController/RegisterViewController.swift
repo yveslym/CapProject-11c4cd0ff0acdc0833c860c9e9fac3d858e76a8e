@@ -28,12 +28,21 @@ class RegisterViewController: UIViewController {
     /// if they are the same unlock the login button
     @IBAction func checkPW(_ sender: Any) {
         
-        if self.password.text != self.confirmPassword.text{
+        if self.password.text != self.confirmPassword.text {
             self.loginButton.isEnabled = false
             
             self.errorMessage.text = " Password Doesn't Match"
             self.errorMessage.textColor = .red
             self.errorMessage.isHidden = false
+        }
+        else if (password.text?.isEmpty)! && (confirmPassword.text?.isEmpty)!{
+             self.loginButton.isEnabled = false
+        }
+        else if (password.text?.characters.count)! < 6{
+             self.loginButton.isEnabled = false
+            self.errorMessage.text = " Paswoord must be more than 6 character"
+            self.errorMessage.isHidden = false
+            self.errorMessage.textColor = .red
         }
         else{
             self.loginButton.isEnabled = true

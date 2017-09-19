@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="20f-IF-8YM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OsE-Xf-Sk6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -120,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gaL-sW-pv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1936.8" y="-914.392803598201"/>
+            <point key="canvasLocation" x="2276" y="-914.392803598201"/>
         </scene>
         <!--Student Profile View Controller-->
         <scene sceneID="hTr-Vh-Vpt">
@@ -247,7 +247,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3170" y="-1323"/>
+            <point key="canvasLocation" x="3508" y="-1323.6881559220392"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Bsh-wg-pN3">
@@ -288,31 +288,31 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="6Gx-ZH-laL">
                                                 <rect key="frame" x="0.0" y="246.5" width="375" height="133.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="          " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2I-M7-Gxu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="36" height="133.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2I-M7-Gxu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="12.5" height="133.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="joZ-44-CH7">
-                                                        <rect key="frame" x="36" y="0.0" width="303" height="133.5"/>
+                                                        <rect key="frame" x="12.5" y="0.0" width="350" height="133.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="31" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="center" minimumFontSize="17" background="textfield icon" translatesAutoresizingMaskIntoConstraints="NO" id="N6I-VO-L26">
-                                                                <rect key="frame" x="0.0" y="0.0" width="303" height="59"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="350" height="59"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="31.5" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" background="textfield icon" translatesAutoresizingMaskIntoConstraints="NO" id="oPF-un-XFI">
-                                                                <rect key="frame" x="0.0" y="74" width="303" height="59.5"/>
+                                                                <rect key="frame" x="0.0" y="74" width="350" height="59.5"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="          " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCc-I7-etI">
-                                                        <rect key="frame" x="339" y="0.0" width="36" height="133.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCc-I7-etI">
+                                                        <rect key="frame" x="362.5" y="0.0" width="12.5" height="133.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -369,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VRS-NJ-9rA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1063.2" y="-914.392803598201"/>
+            <point key="canvasLocation" x="1402.4000000000001" y="-914.392803598201"/>
         </scene>
         <!--Choose User View Controller-->
         <scene sceneID="Msw-O0-EP6">
@@ -443,25 +443,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70H-2V-uH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="155.07246376811597" y="-914.67391304347836"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="LkD-EU-iNM">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TA1-pU-lDe" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="knx-75-qNb">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="wYh-f8-lRN" kind="relationship" relationship="rootViewController" id="2rv-5U-PAM"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EbY-71-ucz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-781.60000000000002" y="-914.392803598201"/>
+            <point key="canvasLocation" x="493.60000000000002" y="-915.29235382308855"/>
         </scene>
         <!--Teacher Profile View Controller-->
         <scene sceneID="bPU-fH-GW5">
@@ -565,7 +547,25 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3238" y="-616"/>
+            <point key="canvasLocation" x="3576.8000000000002" y="-616.64167916041981"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ucW-j8-IMA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OsE-Xf-Sk6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ivH-DG-0vu">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wYh-f8-lRN" kind="relationship" relationship="rootViewController" id="AlF-cQ-eqZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OoN-Pc-iE0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-462" y="-915"/>
         </scene>
     </scenes>
     <resources>

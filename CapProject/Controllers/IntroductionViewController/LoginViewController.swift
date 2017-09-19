@@ -21,17 +21,6 @@ class LoginViewController: UIViewController {
         return false
     }
   
-    @IBAction func cancel(_ sender: Any) {
-        
-        Helpers.studentSelected = false
-        Helpers.teacherSelected = false
-        let initialVC = UIStoryboard.initialViewController(for: .login)
-        self.view.window?.rootViewController = initialVC
-        self.view.window?.makeKeyAndVisible()
-    }
-    
-    
-    
     @IBAction func loginButtonTapped(_ sender: Any) {
         
         // login student
@@ -89,8 +78,6 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
 }
 
 
