@@ -10,14 +10,16 @@ import UIKit
 
 class SideBarMenuTableViewController: UITableViewController {
 
-    @IBOutlet weak var cell: TeacherProfileTableViewCell!
+    @IBOutlet weak var firstname: UILabel!
+    
+    @IBOutlet weak var lastname: UILabel!
+    
+    @IBOutlet weak var numberOfClass: UILabel!
     
     var course =  [Course]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,11 +29,18 @@ class SideBarMenuTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
+        super.viewWillAppear(true)
+        
         CourseServices.fetchTeacherCourses(teacherUID: NetworkConstant.currentUserUID!, completion: {courses in
        
             guard let courses = courses else {return}
             self.course = courses
         })
+        self.firstname.text = Teacher.current.firstName
+        self.lastname.text = Teacher.current.lastName
+        let Ncourses = String(self.course.count)
+        self.numberOfClass.text = "Classes: \(Ncourses)"
+
     }
     
     
@@ -43,14 +52,6 @@ class SideBarMenuTableViewController: UITableViewController {
         Helpers.addStudent = true
         }
     }
-    
-//        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-////            let cell = tableView.dequeueReusableCell(withIdentifier: "teacherProfile", for: indexPath) as! TeacherProfileTableViewCell
-//            self.cell.firstName.text = Teacher.current.firstName
-//            self.cell.lastName.text = Teacher.current.lastName
-//            self.cell.numberOfCourses.text = String(self.course.count)
-//            return self.cell
-//       }
 
     
     

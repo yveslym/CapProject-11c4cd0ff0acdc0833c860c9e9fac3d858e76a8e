@@ -13,9 +13,10 @@ import FirebaseStorage
 class PictureStorageServices{
     
     static func createProfilePicture(withUserUID UserUID: String = NetworkConstant.currentUserUID!, for image: UIImage){
-        
-        let randomtitle = randomString.randomString(length: 5)
-        let imageRef = Storage.storage().reference().child(Constants.profilePic).child(UserUID).child("\(randomtitle).jpg")
+        let dateFormatter = ISO8601DateFormatter()
+        //let randomtitle = randomString.randomString(length: 5)
+        let timestamp = dateFormatter.string(from: Date())
+        let imageRef = Storage.storage().reference().child(Constants.profilePic).child(UserUID).child("\(timestamp).jpg")
         StorageServices.uploadImage(image, at: imageRef) { (downloadURL) in
             guard let downloadURL = downloadURL else {
                 return

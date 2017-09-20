@@ -15,7 +15,7 @@ class StudentAttendanceViewContoller: UIViewController {
     @IBOutlet weak var section: UILabel!
     @IBOutlet weak var teacher: UILabel!
     @IBOutlet weak var markImage: UIImageView!
-    @IBOutlet weak var scanView: UIView!
+    let scanner = QRCode()
     
     
     /// function to setup the view before appear
@@ -40,7 +40,7 @@ class StudentAttendanceViewContoller: UIViewController {
     }
     
     
-    let scanner = QRCode()
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()

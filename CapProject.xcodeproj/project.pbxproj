@@ -65,8 +65,6 @@
 		20ED87011F515D860020A4BB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ED87001F515D860020A4BB /* TableViewController.swift */; };
 		20ED87031F515DA10020A4BB /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ED87021F515DA10020A4BB /* TableViewCell.swift */; };
 		20F82D561F378BDC0011A5FD /* chooseUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F82D551F378BDC0011A5FD /* chooseUserViewController.swift */; };
-		20F82D581F37D5C20011A5FD /* StudentLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F82D571F37D5C20011A5FD /* StudentLoginViewController.swift */; };
-		20F82D5A1F37DFCD0011A5FD /* studentRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F82D591F37DFCD0011A5FD /* studentRegisterViewController.swift */; };
 		20FE85901F34DF4A00C9FA9D /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE858F1F34DF4A00C9FA9D /* Storyboard+Utility.swift */; };
 		20FE85921F34E8B000C9FA9D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20FE85911F34E8B000C9FA9D /* Login.storyboard */; };
 		A13C5FC199FD940C44B2B104 /* Pods_CapProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D3C796D3874828CF6A042A /* Pods_CapProject.framework */; };
@@ -137,8 +135,6 @@
 		20ED87001F515D860020A4BB /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		20ED87021F515DA10020A4BB /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		20F82D551F378BDC0011A5FD /* chooseUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = chooseUserViewController.swift; path = Controllers/chooseUserViewController.swift; sourceTree = "<group>"; };
-		20F82D571F37D5C20011A5FD /* StudentLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentLoginViewController.swift; path = Controllers/StudentLoginViewController.swift; sourceTree = "<group>"; };
-		20F82D591F37DFCD0011A5FD /* studentRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = studentRegisterViewController.swift; path = Controllers/studentRegisterViewController.swift; sourceTree = "<group>"; };
 		20FE858F1F34DF4A00C9FA9D /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Storyboard+Utility.swift"; path = "Service Supporting/Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		20FE85911F34E8B000C9FA9D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Storyboards/Login.storyboard; sourceTree = "<group>"; };
 		25EEB518E361AE18DF3C2DA9 /* Pods-CapProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-CapProject/Pods-CapProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,8 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				2064A3211F3CA82D00EC5C27 /* Student menu View controller */,
-				20F82D571F37D5C20011A5FD /* StudentLoginViewController.swift */,
-				20F82D591F37DFCD0011A5FD /* studentRegisterViewController.swift */,
 				202290A31F3C20D1001FC4BC /* StudentSideBarMenuTableViewController.swift */,
 				20C7E7F91F3FA36600B92601 /* StudentProfileViewController.swift */,
 			);
@@ -523,14 +517,12 @@
 				20ED86F91F50F2600020A4BB /* StudentListOfTeacherTableViewCell.swift in Sources */,
 				20397CB21F4CA0CA0073F150 /* RegisterViewController.swift in Sources */,
 				20C7E7FA1F3FA36600B92601 /* StudentProfileViewController.swift in Sources */,
-				20F82D581F37D5C20011A5FD /* StudentLoginViewController.swift in Sources */,
 				20323CB71F4F2BC7006F1E10 /* TeacherLIstOfCourseTableViewCell.swift in Sources */,
 				20ED86FD1F51332F0020A4BB /* TeacherSideBarViewController.swift in Sources */,
 				2064A3311F3CAB7C00EC5C27 /* StudentResourceViewController.swift in Sources */,
 				2080EF971F6616E900D84B59 /* TeacherTakeAttendanceViewController.swift in Sources */,
 				2064A32F1F3CAA8100EC5C27 /* StudentAssignmentViewController.swift in Sources */,
 				2064A32D1F3CAA0E00EC5C27 /* StudentSettingViewController.swift in Sources */,
-				20F82D5A1F37DFCD0011A5FD /* studentRegisterViewController.swift in Sources */,
 				207912591F424F6300BF4C4A /* AttendanceServices.swift in Sources */,
 				20C43BFF1F2EF4CD00C689D3 /* NetworkConstant.swift in Sources */,
 				20C43C051F2F9BCC00C689D3 /* Student.swift in Sources */,
