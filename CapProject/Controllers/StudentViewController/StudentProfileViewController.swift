@@ -40,6 +40,7 @@ class StudentProfileViewController: UIViewController, UIImagePickerControllerDel
         // self.profilePicture.translatesAutoresizingMaskIntoConstraints = false
         self.profilePicture.contentMode = .scaleAspectFit
         self.profilePicture.isUserInteractionEnabled = true
+        //let pic = UIImageView(frame: CGRectMake(0, 0, 100, 100))
         
     }
     

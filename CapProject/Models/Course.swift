@@ -69,7 +69,7 @@ class Course: NSObject{
             if teacher != nil { teacherInfo = teacher!}
         })
         
-        PostService.fetchPosts(withCourseKey: self.courseID!, completion: {postList in
+        PostService.fetchPosts(withCourseKey: snapshot.key, completion: {postList in
             guard let post = postList else {return}
             Posts = post
         })
@@ -77,7 +77,7 @@ class Course: NSObject{
          self.student = studentList
         self.teacher = teacherInfo
         self.posts = Posts
-    } 
+    }
     
     func getStudent(withUID studentUID: String) -> Student{
         

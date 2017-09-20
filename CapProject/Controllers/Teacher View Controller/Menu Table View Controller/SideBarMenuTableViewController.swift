@@ -35,12 +35,12 @@ class SideBarMenuTableViewController: UITableViewController {
        
             guard let courses = courses else {return}
             self.course = courses
-        })
+    
         self.firstname.text = Teacher.current.firstName
         self.lastname.text = Teacher.current.lastName
         let Ncourses = String(self.course.count)
         self.numberOfClass.text = "Classes: \(Ncourses)"
-
+        })
     }
     
     

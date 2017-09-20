@@ -13,7 +13,7 @@ class TeacherListOfStudentViewController: UIViewController, UITableViewDelegate,
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var selectCourse: UITextField!
-    var index = Int()
+    var index : Int?
     var courseName = [String]()
     var course = [Course]()
     var attendance = [Attendance]()
@@ -27,7 +27,7 @@ class TeacherListOfStudentViewController: UIViewController, UITableViewDelegate,
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //self.fetchCourse()
+        self.fetchCourse()
     }
     
     func fetchCourse(){
@@ -86,7 +86,10 @@ class TeacherListOfStudentViewController: UIViewController, UITableViewDelegate,
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1//1self.course[self.index].student.count
+       
+        guard let count = self.index else{return 0}
+        
+        return self.course[count].student.count
     }
     
 //    func numberOfSections(in tableView: UITableView) -> Int {
@@ -95,11 +98,11 @@ class TeacherListOfStudentViewController: UIViewController, UITableViewDelegate,
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "studentList", for: indexPath) as! TeacherListOfStudentTableViewCell
-        //let student = self.course[self.index].student[indexPath.row]
+        let student = self.course[self.index!].student[indexPath.row]
         
-        cell.firstName.text = "yves" //student.firstName ?? ""
-        cell.lastName.text = "songolo"//student.lastName ?? ""
-        cell.studentLevel.text = "undergraduate"//student.level ?? ""
+        cell.firstName.text = student.firstName ?? ""
+        cell.lastName.text = student.lastName ?? ""
+        cell.studentLevel.text = student.level ?? ""
         
      return cell
     }
