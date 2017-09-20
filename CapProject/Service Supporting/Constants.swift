@@ -50,6 +50,23 @@ struct Constants{
     static let attendanceInfo = "attendance Info"
     static let studentList = "list of student"
     static let profilePic = "profile picture"
+    static let date = "date"
+    static let id = "id"
+    static let postTitle = "post title"
+    static let url = "url"
+    static let postType = "post type"
+    static let announcement = "annoucement"
+    static let pole = "pole"
+    static let assignment = "assignment"
+    static let resources = "resources"
+    
+    
+    
+    
+    
+    
+    
+    
     }
 
 

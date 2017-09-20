@@ -21,6 +21,7 @@ class Course: NSObject{
     var listOfAttendance = [String]()
     var todayAttendance : String?
     var attendance = [Attendance]()
+    var posts = [Post]()
     var schedule : Schedule?
     var courseAdress : String?
     var numberOfStudent: Int?
@@ -58,18 +59,25 @@ class Course: NSObject{
         self.numberOfStudent = Int(snapshot.childrenCount)
         var studentList = [Student]()
         var teacherInfo = Teacher()
-        
+        var Posts = [Post]()
         //==> Mark retrieve teacher info and list of student in this course
         CourseServices.fetchListofStudent(courseKey: snapshot.key, completion: {students in
             if students != nil {studentList = students!}
         })
+        
         TeacherServices.retrieveTeacherInfo(WithUID: self.teacherID, completion: {teacher in
             if teacher != nil { teacherInfo = teacher!}
         })
         
+        PostService.fetchPosts(withCourseKey: self.courseID!, completion: {postList in
+            guard let post = postList else {return}
+            Posts = post
+        })
+        
          self.student = studentList
         self.teacher = teacherInfo
-    }
+        self.posts = Posts
+    } 
     
     func getStudent(withUID studentUID: String) -> Student{
         

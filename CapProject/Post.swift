@@ -13,34 +13,28 @@ class Post: NSObject{
     
     var teacherLastName : String?
     var postDescrition: String?
+    var postTitle: String?
     var url: String?
-    var teacherPicture: UIImage?
-    var date: Date?
+    var date: String?
     var postID:String?
-    
-    override init (){
-        self.date = Date()
-        self.postDescrition = ""
-        self.url = ""
-        self.teacherPicture = UIImage()
-        self.teacherLastName = ""
-        self.postID = ""
-    }
+    var postType: String?
     
     init?(snapshot: DataSnapshot) {
-        
         guard let dict = snapshot.value as? [String: Any]
             
             else{return nil}
         
-        let post = dict["info"] as? Post
-        self.date = post?.date
-        self.postDescrition = post?.postDescrition
-        self.teacherLastName = post?.teacherLastName
-        self.postID = post?.postID
-        self.teacherPicture = UIImage()
-
+        
+        self.date = dict[Constants.date] as? String
+        self.postDescrition = dict[Constants.description] as? String
+        self.teacherLastName = dict[Constants.teachers] as? String
+        self.postID = dict[Constants.id] as? String
+        self.postTitle = dict[Constants.postTitle] as? String
+        self.url = dict[Constants.url] as? String
+        
+        self.postType = dict[Constants.postType] as? String
     }
+    // get post pic
 }
 
 

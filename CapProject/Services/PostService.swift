@@ -16,38 +16,29 @@ struct PostService {
     /// - Parameters: Post
     ///   - post: post contain: teacher name, post description, date of post
     ///   - completion: completion return Post added in the database
-    static func createAlertPost(withPost post: Post!, completion: @escaping (Post?)->Void){
+    static func create(course: Course!, post: Post!){
         
-        if let newPost = post {
-            
-            let postref = NetworkConstant.alertPosttRef.childByAutoId()
-            newPost.postID = postref.key
-            
-            
-            let postAttr = ["teacher last name:":newPost.teacherLastName!, "ID": newPost.postID!,"Descrition":newPost.postDescrition!," date ": newPost.date!] as [String : Any]
-            
-            postref.setValue(postAttr)
-            
-            completion(newPost)
-        }
-        else{
-            completion(nil)
-        }
+        guard let post = post else {return}
+        guard let course = course else {return}
+        
+        let ref = Database.database().reference().child(Constants.post).child(course.courseID!).childByAutoId()
+        
+        let atts = [Constants.postTitle: post.postTitle,Constants.id: ref.key, Constants.date: Helpers.getTodayString(), Constants.description:post.postDescrition, Constants.teachers: post.teacherLastName, Constants.postType: post.postType, Constants.url : post.url]
+        ref.setValue(atts)
     }
    
-    static func retrieveAlertPost(withPostKey key: String, completion: @escaping (Post?)->Void){
-        let ref = NetworkConstant.alertPosttRef.child(key)
+    static func fetchPosts(withCourseKey key: String, completion: @escaping ([Post]?)->Void){
+        let ref = Database.database().reference().child(Constants.post).child(key)
         
         ref.observeSingleEvent(of: .value, with: {(snapshot) in
             
-            guard let post = Post(snapshot: snapshot)
-                else{
-                    return completion (nil)
-            }
-            completion (post)
+            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {return completion([])}
+            
+            let posts = snapshot.reversed().flatMap(Post.init)
+            
+            return completion(posts)
         })
     }
-    
 }
 
 
