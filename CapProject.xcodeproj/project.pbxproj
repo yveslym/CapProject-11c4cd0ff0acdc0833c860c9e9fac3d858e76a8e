@@ -19,6 +19,7 @@
 		204EED601F30D81800F89A58 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204EED5F1F30D81800F89A58 /* Constants.swift */; };
 		204FCCCD1F7102A700149F3A /* StorageServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204FCCCC1F7102A700149F3A /* StorageServices.swift */; };
 		204FCCCF1F71054A00149F3A /* PictureStorageServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204FCCCE1F71054A00149F3A /* PictureStorageServices.swift */; };
+		2051BBF81F730E46000D0D86 /* Postservice+PostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2051BBF71F730E45000D0D86 /* Postservice+PostType.swift */; };
 		205296BF1F3A00A300EBC8BA /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205296BE1F3A00A000EBC8BA /* Course.swift */; };
 		205296C11F3A0A3800EBC8BA /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205296C01F3A0A3700EBC8BA /* Attendance.swift */; };
 		205296C31F3A14A200EBC8BA /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205296C21F3A14A200EBC8BA /* Classes.swift */; };
@@ -85,6 +86,7 @@
 		204EED5F1F30D81800F89A58 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "Service Supporting/Constants.swift"; sourceTree = "<group>"; };
 		204FCCCC1F7102A700149F3A /* StorageServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StorageServices.swift; path = Services/StorageServices.swift; sourceTree = "<group>"; };
 		204FCCCE1F71054A00149F3A /* PictureStorageServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PictureStorageServices.swift; path = Services/PictureStorageServices.swift; sourceTree = "<group>"; };
+		2051BBF71F730E45000D0D86 /* Postservice+PostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Postservice+PostType.swift"; path = "Services/Postservice+PostType.swift"; sourceTree = "<group>"; };
 		205296BE1F3A00A000EBC8BA /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Course.swift; path = Models/Course.swift; sourceTree = "<group>"; };
 		205296C01F3A0A3700EBC8BA /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Attendance.swift; path = Models/Attendance.swift; sourceTree = "<group>"; };
 		205296C21F3A14A200EBC8BA /* Classes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				20EA5FBF1F43475F0087C869 /* CourseServices.swift */,
 				204FCCCC1F7102A700149F3A /* StorageServices.swift */,
 				204FCCCE1F71054A00149F3A /* PictureStorageServices.swift */,
+				2051BBF71F730E45000D0D86 /* Postservice+PostType.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				205296BF1F3A00A300EBC8BA /* Course.swift in Sources */,
 				20DE92FF1F4B71E500BB0EC4 /* Schedule.swift in Sources */,
 				205296C11F3A0A3800EBC8BA /* Attendance.swift in Sources */,
+				2051BBF81F730E46000D0D86 /* Postservice+PostType.swift in Sources */,
 				20C43C011F2EFB6E00C689D3 /* user.swift in Sources */,
 				2064A3591F3CC03300EC5C27 /* ViewController.swift in Sources */,
 				20ED87011F515D860020A4BB /* TableViewController.swift in Sources */,

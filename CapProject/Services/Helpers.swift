@@ -25,7 +25,6 @@ extension String {
 
 class Helpers{
     
-    
     //function to check if the domain of email is edu
     static func checkEmailEdu(forEmail email: String)-> Bool{
         var correct: Bool = false
@@ -67,5 +66,21 @@ class Helpers{
         return today_string
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

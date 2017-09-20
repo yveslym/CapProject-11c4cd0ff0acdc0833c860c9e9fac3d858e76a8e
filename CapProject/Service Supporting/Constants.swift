@@ -26,12 +26,12 @@ struct Constants{
         static let teacherInfo    = "teacher info"
         static let current        = "current"
         static let postAlert      = "Post Alert"
-    static let post = "post"
-    static let AssigmentPost = "Assignment post"
-    static let generalInfoPost = "general info Post"
-    static let level = "level"
-    static let course = "course"
-    static let attendance = "attendance"
+        static let post = "post"
+        static let AssigmentPost = "Assignment post"
+        static let generalInfoPost = "general info Post"
+        static let level = "level"
+        static let course = "course"
+        static let attendance = "attendance"
     static let name = "name"
     static let section = "section"
     static let courseID = "CourseID"
@@ -59,12 +59,7 @@ struct Constants{
     static let pole = "pole"
     static let assignment = "assignment"
     static let resources = "resources"
-    
-    
-    
-    
-    
-    
+    static let subType = "subType"
     
     
     }

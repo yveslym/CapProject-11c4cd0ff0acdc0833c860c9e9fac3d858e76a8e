@@ -18,6 +18,7 @@ class Post: NSObject{
     var date: String?
     var postID:String?
     var postType: String?
+    var subType: String?
     
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String: Any]
@@ -31,7 +32,7 @@ class Post: NSObject{
         self.postID = dict[Constants.id] as? String
         self.postTitle = dict[Constants.postTitle] as? String
         self.url = dict[Constants.url] as? String
-        
+        self.subType = dict[Constants.subType] as? String
         self.postType = dict[Constants.postType] as? String
     }
     // get post pic
