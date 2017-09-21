@@ -23,7 +23,7 @@ struct PostService {
         
         let ref = Database.database().reference().child(Constants.post).child(course.courseID!).childByAutoId()
         
-        let atts = [Constants.postTitle: post.postTitle,Constants.id: ref.key, Constants.date: Helpers.getTodayString(), Constants.description:post.postDescrition, Constants.teachers: post.teacherLastName, Constants.postType: post.postType, Constants.url : post.url, Constants.subType:post.subType]
+        let atts = [Constants.postTitle: post.postTitle,Constants.id: ref.key, Constants.date: Helpers.getTodayString(), Constants.description:post.postDescrition, Constants.teachers: post.teacherLastName, Constants.postType: post.postType, Constants.url : post.url, Constants.subType: post.subType]
         ref.setValue(atts)
     }
    
