@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ActionSheetPicker_3_0
 
 class TeacherPostTableViewController: UITableViewController {
     let post = Post()
@@ -53,13 +54,21 @@ class TeacherPostTableViewController: UITableViewController {
         
         let post = [Constants.postNews,Constants.AssigmentPost, Constants.resources]
         
-        Helpers.elementSelection(elementArray: post, completion: {selectedpost in
-            guard selectedpost != nil else {return}
-          self.post.postType = selectedpost
-            self.selectedPostTypeButton.isHidden = false
-            self.selectedPostButton.titleLabel?.text = selectedpost
+        ActionSheetStringPicker.show(withTitle: "Select Post", rows: post, initialSelection: 1, doneBlock: {
             
-        })
+            picker, indexes, values in
+            
+            if indexes >= 0{
+                
+                self.post.postType = values as? String
+                self.selectedPostButton.titleLabel?.text = values as? String
+                return
+            }
+            else {
+                print("index is less than 0, avoid out of bound // line 58")
+                
+            }
+        }, cancel: {ActionSheetStringPicker in return }, origin: sender)
     }
     
     @IBAction func selectType(_ sender: Any) {
@@ -67,25 +76,55 @@ class TeacherPostTableViewController: UITableViewController {
         switch self.post.postType {
         case Constants.postNews?:
             let newsTypes = [newsTtype.classCancle, newsTtype.classUpdate, newsTtype.examUpdate, newsTtype.midtermUpdate, newsTtype.roomChange,newsTtype.other]
-            Helpers.elementSelection( elementArray: newsTypes, completion: {selectedpost in
-                guard let selected = selectedpost else {return}
-                self.post.subType = selected
-                      self.selectedPostTypeButton.titleLabel?.text = selected
-            })
+            ActionSheetStringPicker.show(withTitle: "Select Subject", rows: newsTypes, initialSelection: 1, doneBlock: {
+                
+                picker, indexes, values in
+                
+                if indexes >= 0{
+                    
+                    self.post.subType = values as? String
+                    self.selectedPostTypeButton.titleLabel?.text = values as? String
+                    return
+                }
+                else {
+                    print("index is less than 0, avoid out of bound // line 58")
+                    
+                }
+            }, cancel: {ActionSheetStringPicker in return }, origin: sender)
         case Constants.AssigmentPost?:
             let assignmentPost = [AssignmentType.exam, AssignmentType.exercies, AssignmentType.homework, AssignmentType.quiz]
-            Helpers.elementSelection(elementArray: assignmentPost, completion:{ selected in
-                guard let selected = selected else {return}
-                self.post.subType = selected
-                      self.selectedPostTypeButton.titleLabel?.text = selected
-            })
+            ActionSheetStringPicker.show(withTitle: "Select Subject", rows: assignmentPost, initialSelection: 1, doneBlock: {
+                
+                picker, indexes, values in
+                
+                if indexes >= 0{
+                    
+                    self.post.subType = values as? String
+                    self.selectedPostTypeButton.titleLabel?.text = values as? String
+                    return
+                }
+                else {
+                    print("index is less than 0, avoid out of bound // line 58")
+                    
+                }
+            }, cancel: {ActionSheetStringPicker in return }, origin: sender)
         case Constants.resources?:
             let resources = [RessourceType.attachement,RessourceType.wikiLink, RessourceType.youtubeLink, RessourceType.otherLink]
-            Helpers.elementSelection(elementArray: resources, completion:{ selected in
-                guard let selected = selected else {return}
-                self.post.subType = selected
-                      self.selectedPostTypeButton.titleLabel?.text = selected
-            })
+            ActionSheetStringPicker.show(withTitle: "Select Subject", rows: resources, initialSelection: 1, doneBlock: {
+                
+                picker, indexes, values in
+                
+                if indexes >= 0{
+                    
+                    self.post.subType = values as? String
+                    self.selectedPostTypeButton.titleLabel?.text = values as? String
+                    return
+                }
+                else {
+                    print("index is less than 0, avoid out of bound // line 58")
+                    
+                }
+            }, cancel: {ActionSheetStringPicker in return }, origin: sender)
         default:
             self.post.subType = nil
         }

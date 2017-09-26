@@ -1273,23 +1273,27 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="E9n-Fm-jGh">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="86.666666666666671"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqa-1d-j8N">
+                                                        <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="138" placeholderIntrinsicHeight="86.666666666666671" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqa-1d-j8N">
                                                             <rect key="frame" x="0.0" y="0.0" width="138" height="86.666666666666671"/>
-                                                            <state key="normal" title="class"/>
+                                                            <state key="normal" title="class">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
                                                             <connections>
                                                                 <action selector="selectCourse:" destination="uRk-yw-zZd" eventType="touchUpInside" id="CBy-g5-uQm"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6c-N2-yHh">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6c-N2-yHh">
                                                             <rect key="frame" x="138" y="0.0" width="138" height="86.666666666666671"/>
-                                                            <state key="normal" title="post"/>
+                                                            <state key="normal" title="Post"/>
                                                             <connections>
                                                                 <action selector="selectPost:" destination="uRk-yw-zZd" eventType="touchUpInside" id="fqd-iL-Do1"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amq-gY-ZmF">
                                                             <rect key="frame" x="276" y="0.0" width="138" height="86.666666666666671"/>
-                                                            <state key="normal" title="type"/>
+                                                            <state key="normal" title="type">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
                                                             <connections>
                                                                 <action selector="selectType:" destination="uRk-yw-zZd" eventType="touchUpInside" id="cZJ-6D-DzI"/>
                                                             </connections>
