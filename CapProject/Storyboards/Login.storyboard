@@ -39,29 +39,29 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="U6T-6U-cTG">
                                         <rect key="frame" x="0.0" y="290.5" width="375" height="190.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbn-Zm-i24">
-                                                <rect key="frame" x="0.0" y="0.0" width="6" height="190.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="       " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbn-Zm-i24">
+                                                <rect key="frame" x="0.0" y="0.0" width="49.5" height="190.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="SMG-Aa-E1U">
-                                                <rect key="frame" x="6" y="0.0" width="363" height="190.5"/>
+                                                <rect key="frame" x="49.5" y="0.0" width="283" height="190.5"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="center" minimumFontSize="17" background="textfield icon" translatesAutoresizingMaskIntoConstraints="NO" id="H8V-wu-OCj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="363" height="53.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="283" height="53.5"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="center" minimumFontSize="17" background="textfield icon" translatesAutoresizingMaskIntoConstraints="NO" id="wvC-fl-inN">
-                                                        <rect key="frame" x="0.0" y="68.5" width="363" height="53.5"/>
+                                                        <rect key="frame" x="0.0" y="68.5" width="283" height="53.5"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="confirm password" textAlignment="center" minimumFontSize="17" background="textfield icon" translatesAutoresizingMaskIntoConstraints="NO" id="brc-iy-adY">
-                                                        <rect key="frame" x="0.0" y="137" width="363" height="53.5"/>
+                                                        <rect key="frame" x="0.0" y="137" width="283" height="53.5"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -71,9 +71,9 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pe-G8-bKc">
-                                                <rect key="frame" x="369" y="0.0" width="6" height="190.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pe-G8-bKc">
+                                                <rect key="frame" x="332.5" y="0.0" width="42.5" height="190.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2001AD171F3D6771006DA313 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2001AD161F3D6771006DA313 /* PostService.swift */; };
+		202233361F79D84D00AF91C3 /* TeacherPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202233351F79D84D00AF91C3 /* TeacherPostTableViewController.swift */; };
 		202290A41F3C20D1001FC4BC /* StudentSideBarMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202290A31F3C20D1001FC4BC /* StudentSideBarMenuTableViewController.swift */; };
 		2030741B1F36DA4400127897 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2030741A1F36DA4400127897 /* GoogleService-Info.plist */; };
 		20323C6F1F4E1398006F1E10 /* Teachermain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20323C711F4E1398006F1E10 /* Teachermain.storyboard */; };
@@ -74,6 +75,7 @@
 /* Begin PBXFileReference section */
 		01F78F2F7E2DA41DC0866B15 /* Pods-CapProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CapProject/Pods-CapProject.debug.xcconfig"; sourceTree = "<group>"; };
 		2001AD161F3D6771006DA313 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostService.swift; path = Services/PostService.swift; sourceTree = "<group>"; };
+		202233351F79D84D00AF91C3 /* TeacherPostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeacherPostTableViewController.swift; path = "Controllers/Teacher View Controller/Menu Table View Controller/TeacherPostTableViewController.swift"; sourceTree = "<group>"; };
 		202290A31F3C20D1001FC4BC /* StudentSideBarMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentSideBarMenuTableViewController.swift; path = Controllers/StudentViewController/StudentSideBarMenuTableViewController.swift; sourceTree = "<group>"; };
 		2030741A1F36DA4400127897 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Service Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		20323C701F4E1398006F1E10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Teachermain.storyboard; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 				20ED86FE1F514F9A0020A4BB /* MyCoursesTableViewController.swift */,
 				2080EF961F6616E900D84B59 /* TeacherTakeAttendanceViewController.swift */,
 				20C815FD1F690D1200618C5B /* TeacherListOfStudentViewController.swift */,
+				202233351F79D84D00AF91C3 /* TeacherPostTableViewController.swift */,
 			);
 			name = "Menu View Controller";
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202233361F79D84D00AF91C3 /* TeacherPostTableViewController.swift in Sources */,
 				204EED601F30D81800F89A58 /* Constants.swift in Sources */,
 				2064A35B1F3CD52C00EC5C27 /* StudentHomePageTableViewController.swift in Sources */,
 				20EA5FC01F43475F0087C869 /* CourseServices.swift in Sources */,

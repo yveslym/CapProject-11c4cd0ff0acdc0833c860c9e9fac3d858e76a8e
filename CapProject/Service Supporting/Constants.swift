@@ -60,6 +60,7 @@ struct Constants{
     static let assignment = "assignment"
     static let resources = "resources"
     static let subType = "subType"
+    static let postNews = " News Post"
     
     
     }

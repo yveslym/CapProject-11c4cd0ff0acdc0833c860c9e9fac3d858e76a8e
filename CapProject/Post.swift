@@ -20,6 +20,19 @@ class Post: NSObject{
     var postType: String?
     var subType: String?
     
+    override init(){
+        self.teacherLastName = ""
+        self.postID = ""
+        self.postType = ""
+        self.postTitle = ""
+        self.postDescrition = ""
+        self.url = ""
+        self.date = ""
+        self.subType = ""
+        
+        
+    }
+    
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String: Any]
             

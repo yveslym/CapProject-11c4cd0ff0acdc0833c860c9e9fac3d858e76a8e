@@ -15,13 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
+    let initialVC = UIStoryboard.initialViewController(for: .Teachermain)
+    self.view.window?.rootViewController = initialVC
+    self.view.window?.makeKeyAndVisible()
+
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        FirebaseApp.configure()
-        
-        configureInitialleVC(for: window)
-        
+    
+//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//
+//        FirebaseApp.configure()
+//
+//        configureInitialleVC(for: window)
+    
         // Override point for customization after application launch.
         return true
     }
