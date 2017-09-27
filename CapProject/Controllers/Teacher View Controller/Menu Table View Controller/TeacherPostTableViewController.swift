@@ -38,17 +38,33 @@ class TeacherPostTableViewController: UITableViewController {
 
     @IBAction func selectCourse(_ sender: Any) {
        
-        do {
+        CourseServices.fetchTeacherCourses(teacherUID: NetworkConstant.currentUserUID!,
+           completion: {courses in
+            guard let list = courses else {return}
+           var coursename = [String]()
+            for course in courses!{
+                coursename.append(course.courseName!)
+            }
+            ActionSheetStringPicker.show(withTitle: "Select Course", rows: coursename, initialSelection: 1, doneBlock: {
+                
+                picker, indexes, values in
+                
+                if indexes >= 0{
+                    
+                    self.post.courseID = list[indexes].courseID
+                    self.selectedPostButton.titleLabel?.text = values as? String
+                    return
+                }
+                else {
+                    print("index is less than 0, avoid out of bound // line 58")
+                    
+                }
+            }, cancel: {ActionSheetStringPicker in return }, origin: sender)
             
-            Helpers.selectCourse(userID: NetworkConstant.currentUserUID!, completion: {(selectedCourse, index,course) in
-            
-            guard let selected = selectedCourse else {return}
-            self.selectedCourseButton.titleLabel?.text = selected
-            
-            guard let course = course else {return}
-                self.post.teacherLastName = course.teacher?.lastName
         })
-    }
+            
+   
+    
     }
     @IBAction func selectPost(_ sender: Any) {
         

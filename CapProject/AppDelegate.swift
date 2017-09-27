@@ -127,7 +127,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
           
-            initialVC = UIStoryboard.initialViewController(for: .Teachermain)
+            //initialVC = UIStoryboard.initialViewController(for: .Teachermain)
             window?.rootViewController = initialVC
             window?.makeKeyAndVisible()
         }

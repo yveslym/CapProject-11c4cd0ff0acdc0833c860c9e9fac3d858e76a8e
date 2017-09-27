@@ -19,6 +19,7 @@ class Post: NSObject{
     var postID:String?
     var postType: String?
     var subType: String?
+    var courseID: String?
     
     override init(){
         self.teacherLastName = ""
@@ -29,6 +30,8 @@ class Post: NSObject{
         self.url = ""
         self.date = ""
         self.subType = ""
+        self.courseID = ""
+        
         
         
     }
@@ -47,6 +50,7 @@ class Post: NSObject{
         self.url = dict[Constants.url] as? String
         self.subType = dict[Constants.subType] as? String
         self.postType = dict[Constants.postType] as? String
+        self.courseID = dict[Constants.courseID] as? String
     }
     // get post pic
 }

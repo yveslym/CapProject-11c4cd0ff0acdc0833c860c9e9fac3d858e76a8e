@@ -16,14 +16,14 @@ struct PostService {
     /// - Parameters: Post
     ///   - post: post contain: teacher name, post description, date of post
     ///   - completion: completion return Post added in the database
-    static func create(course: Course!, post: Post!){
+    static func create( post: Post!){
         
         guard let post = post else {return}
-        guard let course = course else {return}
+       
         
-        let ref = Database.database().reference().child(Constants.post).child(course.courseID!).childByAutoId()
+        let ref = Database.database().reference().child(Constants.post).child(post.courseID!).childByAutoId()
         
-        let atts = [Constants.postTitle: post.postTitle,Constants.id: ref.key, Constants.date: Helpers.getTodayString(), Constants.description:post.postDescrition, Constants.teachers: post.teacherLastName, Constants.postType: post.postType, Constants.url : post.url, Constants.subType: post.subType]
+        let atts = [Constants.postTitle: post.postTitle,Constants.id: ref.key, Constants.date: Helpers.getTodayString(), Constants.description:post.postDescrition, Constants.teachers: post.teacherLastName, Constants.postType: post.postType, Constants.url : post.url, Constants.subType: post.subType, Constants.courseID: post.courseID]
         ref.setValue(atts)
     }
    
